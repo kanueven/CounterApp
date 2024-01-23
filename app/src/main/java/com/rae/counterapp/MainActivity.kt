@@ -105,7 +105,7 @@ fun CounterApp(modifier: Modifier = Modifier){
                         currentCount.value -= 1
                     }
                     //if it goes below 1 reset to 5
-                    if (currentCount.value < 1){
+                    else{
                         currentCount.value = 5
                      }
                 },colors = ButtonDefaults.buttonColors(
@@ -124,10 +124,14 @@ fun CounterApp(modifier: Modifier = Modifier){
                         currentCount.value += 1
                     }
                     //if it goes over 5 reset to 1
-                    if (currentCount.value > 5){
+                    else{
                         currentCount.value = 1
                     }
-                }
+                },
+        colors = ButtonDefaults.buttonColors(
+
+        contentColor = Color.White
+        )
             ) {
                 Text(text = "Next")
             }
